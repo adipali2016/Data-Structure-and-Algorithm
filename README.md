@@ -138,6 +138,16 @@
         </li>
       </ul>
     </li>
+    <li>
+      Circular Queue
+      <ul>
+        <li>Enqueue</li>
+        <li>Dequeue</li>
+        <li>peek</li>
+        <li>Display</li>
+        <li>isEmpty</li>
+      </ul>
+    </li>
   </ol>
 </details>
 
