@@ -93,6 +93,15 @@ class deque{
         rear--;
     }
 
+    bool isEmpty()
+    {
+        if(front==-1)
+        {
+            return true;
+        }
+        return false;
+    }
+
     void display()
     {
         if(rear==-1)
