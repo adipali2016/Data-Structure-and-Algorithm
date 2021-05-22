@@ -148,6 +148,17 @@
         <li>isEmpty</li>
       </ul>
     </li>
+    <li>
+      Double Ended Queue
+      <ul>
+        <li>Insertion form front</li>
+        <li>Insertion from Rear</li>
+        <li>Deletion from Rear</li>
+        <li>Deletion from Front</li>
+        <li>isEmpty</li>
+        <li>Display</li>
+      </ul>
+    </li>
   </ol>
 </details>
 
