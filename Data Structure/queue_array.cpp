@@ -37,6 +37,12 @@ class queue{
         if(front==-1 || front>rear)
         {
             cout<<"Underflow"<<endl;
+            if(front>rear)
+            {
+                front=-1;
+                rear=-1;
+                return;
+            }
             return;
         }
         front++;
