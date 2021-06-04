@@ -17,6 +17,7 @@ void insert(int* a, int x)
     top++;
 }
 
+//Insert at pos
 void insertAtPos(int* a, int x, int m)
 {
     //Insertion at an specific position.
@@ -36,6 +37,7 @@ void insertAtPos(int* a, int x, int m)
     top++;
 }
 
+//Traverse
 void traverse(int* a)
 {
     if(top>0)
@@ -51,6 +53,7 @@ void traverse(int* a)
 
 }
 
+//Search
 int search(int* a, int m)
 {
     int n=sizeof(a)/sizeof(a[0]);
@@ -64,6 +67,7 @@ int search(int* a, int m)
     return -1;
 }
 
+//Deletion
 void deletion(int* a, int m)
 {
     int x = search(a,m);
