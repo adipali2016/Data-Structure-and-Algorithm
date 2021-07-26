@@ -188,6 +188,82 @@ int sumAtK(Node* root, int k)
     return sum;
 }
 
+//Count of total node
+int count(Node* root)
+{
+    if(root==NULL)
+    {
+        return 0;
+    }
+
+    return count(root->left)+count(root->right)+1;
+}
+
+//Sum of all the nodes
+int sum(Node* root)
+{
+    if(root==NULL)
+    {
+        return 0;
+    }
+
+    return sum(root->left) + sum(root->right) + root->data;
+}
+
+//Height of a tree
+int calH(Node* root)
+{
+    if(root==NULL)
+    {
+        return 0;
+    }
+
+    int lheight = calH(root->left);
+    int rheight = calH(root->right);
+
+    return max(lheight, rheight)+1;
+}
+
+//Diameter of a tree
+int calD(Node* root)
+{
+    if(root == NULL)
+    {
+        return 0;
+    }
+
+    int lheight = calH(root->left);
+    int rheight = calH(root->right);
+
+    int currD = lheight + rheight + 1;
+
+    int rD = calD(root->left);
+    int lD = calD(root->right);
+
+    return max(currD, max(lD, rD));
+
+    /*
+    More optimised way
+
+    int calD(Node* root, int &height)
+    {
+        if(root==Null)
+        {
+            *height = 0;
+            return 0;
+        }
+
+        int lh = 0, rh=0;
+        int ld = calD(root->left, &lh);
+        int rd = claD(root->right, &rh);
+
+        int currh = lh+rh+1;
+        *height = max(lh,rh)+1;
+
+        return max(*currh, max(ld, rd)); 
+    }
+    */
+}
 
 
 int main()
@@ -226,5 +302,17 @@ int main()
 
     //Sum  at kth Level
     cout<<sumAtK(root, 2)<<endl;
+
+    //Count of all total nodes present
+    cout<<count(root)<<endl;
+
+    //Sum of all the nodes
+    cout<<sum(root)<<endl;
+
+    //Calculating height
+    cout<<calH(root)<<endl;
+
+    //Calculating Diameter
+    cout<<calD(root)<<endl;
 
 }
